@@ -4,7 +4,7 @@
 
 ### Explicación:
 
-🍄Se implemento el patrón Singleton utilizando una enumeración llamada InventarioFriki. Esta enumeración define una única instancia llamada INSTANCE, que es la única forma de acceder al inventario friki en toda la aplicación.
+🍄Se implemento el patrón Singleton utilizando una enumeración llamada InventarioFriki. Esto define una única instancia llamada INSTANCE, que es la única forma de acceder al inventario friki en toda la aplicación.
 
 🍄El inventario friki contiene una lista de artículos frikis, representados por la clase ArticuloFriki. Esta clase tiene un nombre y una categoría que indica la edad para la cual está destinado el artículo (niño, adolescente o adulto).
 
