@@ -6,39 +6,56 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class PayByPayPal implements PayStrategy {
+    private static final Map<String, String> DATA_BASE = new HashMap<>();
     private final BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
-    private CreditCard card;
+    private String email;
+    private String password;
+    private boolean signedIn;
+
+    static {
+        DATA_BASE.put("amanda1985", "amanda@ya.com");
+        DATA_BASE.put("qwerty", "john@amazon.eu");
+    }
 
     @Override
     public void collectPaymentDetails() {
         try {
-            System.out.print("Ingrese el numero de tarjeta: ");
-            String number = READER.readLine();
-            System.out.print("Ingrese la fecha de vencimiento de la tarjeta 'mm/aa' ");
-            String date = READER.readLine();
-            System.out.print("Introduce el código CVV: ");
-            String cvv = READER.readLine();
-            card = new CreditCard(number, date, cvv);
-
+            while (!signedIn) {
+                System.out.print("Introduce el correo electrónico del usuario: ");
+                email = READER.readLine();
+                System.out.print("Introduce la contraseña: ");
+                password = READER.readLine();
+                if (verify()) {
+                    System.out.println("La verificación de datos ha sido exitosa.");
+                } else {
+                    System.out.println("¡Correo electrónico o contraseña incorrectos!");
+                }
+            }
         } catch (IOException ex) {
             ex.printStackTrace();
         }
     }
 
+    private boolean verify() {
+        setSignedIn(email.equals(DATA_BASE.get(password)));
+        return signedIn;
+    }
+
     @Override
     public boolean pay(int paymentAmount) {
-        if (cardIsPresent()) {
-            System.out.println("Pagar " + paymentAmount + " con Tarjeta de Credito.");
-            card.setAmount(card.getAmount() - paymentAmount);
+        if (signedIn) {
+            System.out.println("Pagando " + paymentAmount + " usando PayPal.");
             return true;
         } else {
             return false;
         }
     }
 
-    private boolean cardIsPresent() {
-        return card != null;
+    private void setSignedIn(boolean signedIn) {
+        this.signedIn = signedIn;
     }
+    
         
 }
