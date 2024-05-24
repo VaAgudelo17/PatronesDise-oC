@@ -15,15 +15,15 @@ public class MediatorTest {
 
     @BeforeEach
     public void init() {
-        // Crear instancias de los componentes
+      
         coche = new Coche();
         radio = new Radio();
         telefono = new Telefono();
 
-        // Crear el mediador y pasárselo a los componentes
+       
         mediator = new CocheMediator(coche, radio, telefono);
 
-        // Establecer el mediador en cada componente
+        
         coche.setMediator(mediator);
         radio.setMediator(mediator);
         telefono.setMediator(mediator);
