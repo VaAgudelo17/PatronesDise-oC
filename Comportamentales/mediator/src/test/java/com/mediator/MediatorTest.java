@@ -15,15 +15,26 @@ public class MediatorTest {
 
     @BeforeEach
     public void init() {
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> c8b96bca8b5f766f200fd7041e0f7600b01a38ab
         coche = new Coche();
         radio = new Radio();
         telefono = new Telefono();
 
+<<<<<<< HEAD
        
         mediator = new CocheMediator(coche, radio, telefono);
 
         
+=======
+    
+        mediator = new CocheMediator(coche, radio, telefono);
+
+       
+>>>>>>> c8b96bca8b5f766f200fd7041e0f7600b01a38ab
         coche.setMediator(mediator);
         radio.setMediator(mediator);
         telefono.setMediator(mediator);
