@@ -69,7 +69,7 @@ El Patrón State es un patrón de diseño de comportamiento que permite a un obj
 Se implementa el Patrón State para modelar los diferentes estados de una tarjeta de crédito y cómo su comportamiento cambia en función de esos estados. Se definen clases para representar cada estado posible de la tarjeta (como "Activa", "Desactivada" y "Bloqueada"), así como una clase para el contexto que utiliza estos estados (la clase User).
 
 ### Resultado:
-<img width="744" alt="Captura de Pantalla 2024-05-24 a la(s) 17 34 35" src="https://github.com/VaAgudelo17/PatronesDise-oC/assets/114451968/8db30b1e-3e35-4b38-8668-781bb2dfd49c">
+<img width="781" alt="Captura de Pantalla 2024-05-24 a la(s) 17 41 05" src="https://github.com/VaAgudelo17/PatronesDise-oC/assets/114451968/04bd30c4-d158-49f8-8bd9-cef32c8f8c03">
 
 
 
