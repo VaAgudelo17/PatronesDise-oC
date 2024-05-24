@@ -13,7 +13,7 @@ public class TestBaseDatosConLogger {
     public void init() {
         BaseDeDatos sinLogger = new BaseDeDatosMemoria();
         logger = new Logger();
-        bbdd = new LoggerDecorador(sinLogger, logger); // Asignamos el decorador
+        bbdd = new LoggerDecorador(sinLogger, logger); 
     }
 
     @Test
