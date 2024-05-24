@@ -28,3 +28,5 @@ El Patrón Decorador es un patrón de diseño estructural que permite añadir co
 
 ⭐️Se creó una clase de prueba TestBaseDatosConLogger para verificar que LoggerDecorador añade correctamente los mensajes de log antes de ejecutar las operaciones en la base de datos.
 
+### Resultado:
+
